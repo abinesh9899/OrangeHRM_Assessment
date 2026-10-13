@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [OrangeHRM Employee Lifecycle]" guice-stage="DEVELOPMENT" verbose="0">
+  <listeners>
+    <listener class-name="com.orangehrm.listeners.ExtentListener"/>
+  </listeners>
+  <test thread-count="5" name="Employee lifecycle end-to-end(failed)" verbose="0">
+    <classes>
+      <class name="com.orangehrm.tests.EmployeeLifecycleTest">
+        <methods>
+          <include name="loginAndVerifyDashboard"/>
+          <include name="validateEmployeeThroughApi"/>
+          <include name="addEmployeeWithProfilePicture"/>
+          <include name="verifyDeletionThroughApiWhenConfigured"/>
+          <include name="tearDown"/>
+          <include name="updateJobTitleAndEmploymentStatus"/>
+          <include name="deleteEmployeeAndVerifyUi"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.orangehrm.tests.EmployeeLifecycleTest -->
+    </classes>
+  </test> <!-- Employee lifecycle end-to-end(failed) -->
+</suite> <!-- Failed suite [OrangeHRM Employee Lifecycle] -->
